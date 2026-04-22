@@ -1,0 +1,21 @@
+# Unit tests for the comfort_level() function
+
+# Fill in the blank spaces in the calls to comfort_level() below, using
+# the values you've chosen for testing the function
+
+# Then write a test_ok() function that tests the other equivalence class
+
+from weather import comfort_level
+
+def test_cold():
+    assert comfort_level(14.9) == "COLD"
+    assert comfort_level(10.0) == "COLD"
+
+def test_hot():
+    assert comfort_level(25.1) == "HOT"
+    assert comfort_level(30.0) == "HOT"
+
+def test_ok():
+    assert comfort_level(15.0) == "OK"
+    assert comfort_level(20.0) == "OK"
+    assert comfort_level(25.0) == "OK"
